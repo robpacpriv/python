@@ -1,20 +1,23 @@
 # run py code: CTRL + R
 # format document by pep8: SHIFT + ALT + F
 
+#Name game proposition from Laura: "Nauka z tata i corka", "Learning with Dady and Doughter"
+
 import random
 
 #name = input("Please provide your name: ")
 goodAnswers = 0
 numberOfQuestions = 10
 
-for x in range(numberOfQuestions):
+for x in range(0, numberOfQuestions, 1):
 
     resolut = None
+    questionNumer = x + 1
 
     number1 = random.randint(2, 10)
     number2 = random.randint(2, 10)
 
-    question = ("Please provide resoult multiplication of ") + str(number1) + (" and ") + str(number2) + (": ")
+    question = ("Question ") + str(questionNumer) + ("/") + str(numberOfQuestions) + (": Provide resoult of task: ") + str(number1) + ("*") + str(number2) + ("? ")
 
     while resolut is None: 
         try:
@@ -24,7 +27,7 @@ for x in range(numberOfQuestions):
 
     if resolut == (number1*number2):
         goodAnswers = goodAnswers + 1
-        print ("\x1b[6;30;42m" + "Good, you are erning star: *" + "\x1b[0m")
+        print ("\x1b[6;30;42m" + "Good, you are erning a star: *" + "\x1b[0m")
     else:
         print ("\x1b[6;30;41m" + "Oh no, you made a mistake :-(" + "\x1b[0m")
 

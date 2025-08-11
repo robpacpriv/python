@@ -32,7 +32,7 @@ print("""\nYou Learning Path:
 \t- AI""")
 
 print("\n----------------------------------\n")
-# Challange Course 5:
+# Challange Course 5: Data with Baraa
 
 domain = ("pacula.eu")
 

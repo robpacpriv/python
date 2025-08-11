@@ -10,9 +10,10 @@ number2 = 1
 goodAnswers = 0
 numberOfQuestions = 10
 
-for x in range(numberOfQuestions):
+for x in range(0, numberOfQuestions, 1):
 
     resolut = None
+    questionNumer = x + 1
 
     while True:
         number1 = random.randint(1, 100)
@@ -21,7 +22,7 @@ for x in range(numberOfQuestions):
         if (number1 % number2) == 0:
             break
 
-    question = ("Please provide resoult division of ") + str(number1) + (" and ") + str(number2) + (": ")
+    question = ("Question ") + str(questionNumer) + ("/") + str(numberOfQuestions) + (": Provide resoult of task: ") + str(number1) + ("/") + str(number2) + ("? ")
 
     while resolut is None: 
         try:
@@ -31,7 +32,7 @@ for x in range(numberOfQuestions):
 
     if resolut == (number1/number2):
         goodAnswers = goodAnswers + 1
-        print ("\x1b[6;30;42m" + "Good, you are erning star: *" + "\x1b[0m")
+        print ("\x1b[6;30;42m" + "Good, you are erning a star: *" + "\x1b[0m")
     else:
         print ("\x1b[6;30;41m" + "Oh no, you made a mistake :-(" + "\x1b[0m")
 
@@ -43,4 +44,3 @@ if goodAnswers > 0 and goodAnswers < numberOfQuestions/2:
     print ("Keep learning and try again. You have earned:", goodAnswers, "of", numberOfQuestions, "stars")
 if goodAnswers == 0:
     print ("Better go back to learn. YYou have earned:", goodAnswers, "of", numberOfQuestions, "stars")
-

@@ -1,3 +1,6 @@
+# run py code: CTRL + R
+# format document by pep8: SHIFT + ALT + F
+
 def print_format_table():
     """
     prints table of formatted text format options
